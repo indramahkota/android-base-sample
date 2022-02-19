@@ -1,21 +1,23 @@
 import com.indramahkota.buildSrc.Libs
 
 plugins {
-    id 'com.android.library'
+    id 'com.android.dynamic-feature'
     id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
     compileSdk project.ext.compileSdk
 
     defaultConfig {
+        applicationId "com.indramahkota.dynamic_feature"
         minSdk project.ext.minSdk
         targetSdk project.ext.targetSdk
         versionCode project.ext.versionCode
         versionName project.ext.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -24,32 +26,29 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+
+    buildFeatures {
+        viewBinding true
     }
-    kotlinOptions {
-        jvmTarget = '1.8'
+}
+
+kapt {
+    arguments {
+        // Make Hilt share the same definition of Components in tests instead of
+        // creating a new set of Components per test class.
+        arg("dagger.hilt.shareTestComponents", "true")
     }
 }
 
 dependencies {
-    // KTX
-    api Libs.AndroidX.coreKtx
-    implementation Libs.AndroidX.Fragment.fragmentKtx
-    implementation Libs.AndroidX.Activity.activityKtx
+    implementation project(":common")
+    implementation project(":app:app")
+    implementation project(":app:data")
+    implementation project(":app:domain")
 
-    // Coroutines
-    api Libs.Coroutines.core
-    api Libs.Coroutines.android
-
-    // Common Libs
-    api Libs.Android.material
-    api Libs.AndroidX.appcompat
-    api Libs.AndroidX.Constraint.constraintLayout
-
-    // Timber
-    api Libs.Timber.timber
+    // Hilt
+    implementation Libs.Dagger.hiltAndroid
+    kapt Libs.Dagger.hiltAndroidCompiler
 
     // Unit Test
     testImplementation Libs.JUnit.junit

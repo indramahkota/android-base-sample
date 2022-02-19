@@ -6,7 +6,8 @@ object Versions {
 
 object Libs {
     const val androidGradlePlugin = "com.android.tools.build:gradle:7.0.4"
-    const val secretsGradlePlugin = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.0"
+    const val secretsGradlePlugin =
+        "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.0"
 
     object Kotlin {
         private const val version = "1.6.10"
@@ -40,11 +41,13 @@ object Libs {
         object Fragment {
             const val version = "1.4.0"
             const val fragmentKtx = "androidx.fragment:fragment-ktx:$version"
+            const val fragmentTesting = "androidx.fragment:fragment-testing:$version"
         }
 
         object Constraint {
             const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.2"
-            const val constraintLayoutCompose = "androidx.constraintlayout:constraintlayout-compose:1.0.0-rc02"
+            const val constraintLayoutCompose =
+                "androidx.constraintlayout:constraintlayout-compose:1.0.0-rc02"
         }
 
         object Compose {
@@ -57,7 +60,8 @@ object Libs {
 
             const val ui = "androidx.compose.ui:ui:$composeVersion"
             const val material = "androidx.compose.material:material:$composeVersion"
-            const val materialIconsExtended = "androidx.compose.material:material-icons-extended:$composeVersion"
+            const val materialIconsExtended =
+                "androidx.compose.material:material-icons-extended:$composeVersion"
 
             const val tooling = "androidx.compose.ui:ui-tooling:$composeVersion"
             const val uiTest = "androidx.compose.ui:ui-test-junit4:$composeVersion"
@@ -73,12 +77,14 @@ object Libs {
 
         object Navigation {
             private const val version = "2.4.0-rc01"
-            const val navigationSafeArguments = "androidx.navigation:navigation-safe-args-gradle-plugin:$version"
+            const val navigationSafeArguments =
+                "androidx.navigation:navigation-safe-args-gradle-plugin:$version"
             const val compose = "androidx.navigation:navigation-compose:$version"
 
             const val fragment = "androidx.navigation:navigation-fragment-ktx:$version"
             const val ui = "androidx.navigation:navigation-ui-ktx:$version"
-            const val dynamicFeaturesFragment = "androidx.navigation:navigation-dynamic-features-fragment:$version"
+            const val dynamicFeaturesFragment =
+                "androidx.navigation:navigation-dynamic-features-fragment:$version"
             const val testing = "androidx.navigation:navigation-testing:$version"
         }
 
@@ -91,13 +97,14 @@ object Libs {
             private const val version = "1.4.0"
             const val core = "androidx.test:core:$version"
             const val rules = "androidx.test:rules:$version"
+            const val coreTesting = "androidx.arch.core:core-testing:2.1.0"
 
             object Ext {
-                private const val version = "1.1.2"
+                private const val version = "1.1.3"
                 const val junit = "androidx.test.ext:junit-ktx:$version"
             }
 
-            const val espressoCore = "androidx.test.espresso:espresso-core:3.2.0"
+            const val espressoCore = "androidx.test.espresso:espresso-core:3.4.0"
         }
 
         object Room {
@@ -105,6 +112,11 @@ object Libs {
             const val runtime = "androidx.room:room-runtime:$version"
             const val ktx = "androidx.room:room-ktx:$version"
             const val compiler = "androidx.room:room-compiler:$version"
+        }
+
+        object SQLiteKtx {
+            private const val version = "2.2.0"
+            const val sqliteKtx = "androidx.sqlite:sqlite-ktx:$version"
         }
     }
 
@@ -115,7 +127,8 @@ object Libs {
         const val hiltAndroid = "com.google.dagger:hilt-android:$version"
         const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:$version"
         const val hiltAndroidTesting = "com.google.dagger:hilt-android-testing:$version"
-        const val hiltLifecycleViewModel = "androidx.hilt:hilt-lifecycle-viewmodel:$hiltLifecycleViewModelVersion"
+        const val hiltLifecycleViewModel =
+            "androidx.hilt:hilt-lifecycle-viewmodel:$hiltLifecycleViewModelVersion"
         const val hiltCompiler = "androidx.hilt:hilt-compiler:$version"
     }
 
@@ -152,8 +165,56 @@ object Libs {
         const val shimmer = "com.facebook.shimmer:shimmer:$version"
     }
 
+    object LeakCanary {
+        private const val version = "2.6"
+        const val leakcanary = "com.squareup.leakcanary:leakcanary-android:$version"
+    }
+
+    object SqlCipher {
+        private const val version = "4.4.0"
+        const val sqlcipher = "net.zetetic:android-database-sqlcipher:$version"
+    }
+
     object JUnit {
         private const val version = "4.13.2"
         const val junit = "junit:junit:$version"
+    }
+
+    object MockWebServer {
+        private const val version = "4.9.3"
+        const val mockwebserver = "com.squareup.okhttp3:mockwebserver:$version"
+        const val okhttpIdlingResource = "com.jakewharton.espresso:okhttp3-idling-resource:1.0.0"
+    }
+
+    object Mockito {
+        private const val version = "4.3.0"
+        const val core = "org.mockito:mockito-core:$version"
+        const val inline = "org.mockito:mockito-inline:$version"
+        const val android = "org.mockito:mockito-android:$version"
+    }
+
+    object RoboElectric {
+        private const val version = "4.6"
+        const val robolectric = "org.robolectric:robolectric:$version"
+    }
+
+    object Turbine {
+        private const val version = "0.7.0"
+        const val turbine = "app.cash.turbine:turbine:$version"
+    }
+
+    object Lottie {
+        private const val version = "3.6.1"
+        const val lottie = "com.airbnb.android:lottie:$version"
+    }
+
+    object PrettyTime {
+        private const val version = "4.0.4.Final"
+        const val prettyTime = "org.ocpsoft.prettytime:prettytime:$version"
+    }
+
+    object JodaTime {
+        private const val version = "2.10.13"
+        const val jodaTime = "joda-time:joda-time:$version"
     }
 }

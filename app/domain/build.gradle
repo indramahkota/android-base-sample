@@ -24,32 +24,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
 }
 
 dependencies {
-    // KTX
-    api Libs.AndroidX.coreKtx
-    implementation Libs.AndroidX.Fragment.fragmentKtx
-    implementation Libs.AndroidX.Activity.activityKtx
-
-    // Coroutines
-    api Libs.Coroutines.core
-    api Libs.Coroutines.android
-
-    // Common Libs
-    api Libs.Android.material
-    api Libs.AndroidX.appcompat
-    api Libs.AndroidX.Constraint.constraintLayout
-
-    // Timber
-    api Libs.Timber.timber
+    implementation project(":common")
 
     // Unit Test
     testImplementation Libs.JUnit.junit

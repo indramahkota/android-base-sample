@@ -5,10 +5,10 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Hilt Example"
-include ':app'
-include ':data'
-include ':domain'
-include ':regular_feature'
-include ':dynamic_feature'
+rootProject.name = "Hilt Multi Module Sample"
 include ':common'
+include ':app:app'
+include ':app:data'
+include ':app:domain'
+include ':feature_regular:feature_regular'
+include ':feature_dynamic:feature_dynamic'

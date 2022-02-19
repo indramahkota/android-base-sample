@@ -11,12 +11,15 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app/app" />
+            <option value="$PROJECT_DIR$/app/data" />
+            <option value="$PROJECT_DIR$/app/domain" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/common" />
-            <option value="$PROJECT_DIR$/data" />
-            <option value="$PROJECT_DIR$/domain" />
-            <option value="$PROJECT_DIR$/dynamic_feature" />
-            <option value="$PROJECT_DIR$/regular_feature" />
+            <option value="$PROJECT_DIR$/feature_dynamic" />
+            <option value="$PROJECT_DIR$/feature_dynamic/feature_dynamic" />
+            <option value="$PROJECT_DIR$/feature_regular" />
+            <option value="$PROJECT_DIR$/feature_regular/feature_regular" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
