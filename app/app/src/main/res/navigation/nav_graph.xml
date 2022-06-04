@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/regularFeatureFragment"
-        android:name="com.indramahkota.feature_regular.RegularFeatureFragment"
+        android:name="com.indramahkota.regular_feature.RegularFeatureFragment"
         android:label="RegularFeatureFragment"
         tools:layout="@layout/fragment_regular_feature" />
 
@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_dynamic_feature" -->
     <fragment
         android:id="@+id/dynamicFeatureFragment"
-        android:name="DynamicFeatureFragment"
+        android:name="com.indramahkota.dynamic_feature.DynamicFeatureFragment"
         android:label="DynamicFeatureFragment" />
 
 </navigation>

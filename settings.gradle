@@ -6,9 +6,9 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Hilt Multi Module Sample"
-include ':common'
 include ':app:app'
 include ':app:data'
 include ':app:domain'
-include ':feature_regular:feature_regular'
-include ':feature_dynamic:feature_dynamic'
+include ':app:common'
+include ':feature_regular:regular_feature'
+include ':feature_dynamic:dynamic_feature'

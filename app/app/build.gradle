@@ -41,7 +41,7 @@ android {
         viewBinding true
     }
 
-    dynamicFeatures = [':feature_dynamic:feature_dynamic']
+    dynamicFeatures = [':feature_dynamic:dynamic_feature']
 }
 
 kapt {
@@ -53,10 +53,10 @@ kapt {
 }
 
 dependencies {
-    implementation project(":common")
     implementation project(":app:data")
     implementation project(":app:domain")
-    implementation project(':feature_regular:feature_regular')
+    implementation project(":app:common")
+    implementation project(':feature_regular:regular_feature')
 
     // Navigation Component
     implementation Libs.AndroidX.Navigation.ui
