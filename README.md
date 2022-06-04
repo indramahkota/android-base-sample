@@ -6,16 +6,17 @@
 ```
 - hilt-multi-module-sample
     - app (Android Application)
-    - buildSrc (Kotlin Library - Dependencies)
-    - common (Android Library - Shared Resource)
+        - app (Android Application)
+        - common (Android Library)
+        - data (Android Library)
+        - domain (Android Library)
+    - buildSrc (Kotlin Library - All Dependencies)
     - feature_dynamic
-        - feature_dynamic (Android Dynamic Feature)
-        - data (Android Library - Data Source)
-        - domain (Android Library - Model)
+        - dynamic_feature (Android Dynamic Feature)
+        - other_dynamic_feature (Android Dynamic Feature)
     - feature_regular
-        - feature_regular (Android Library)
-        - data (Android Library - Data Source)
-        - domain (Android Library - Model)
+        - regular_feature (Android Library)
+        - other_regular_feature (Android Library)
 ```
 
 ## How To Use 🔧
