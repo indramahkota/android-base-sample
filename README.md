@@ -5,7 +5,7 @@
 ## Structure
 ```
 - hilt-multi-module-sample
-    - app (Android Application)
+    - app
         - app (Android Application)
         - common (Android Library)
         - data (Android Library)
