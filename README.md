@@ -1,21 +1,23 @@
-# Jetpack Compose Exploration
+# Modern Android Development (MAD) Sample
 
-[![GitHub](https://img.shields.io/github/license/indramahkota/android-compose-exploration?color=blue)](https://github.com/indramahkota/android-compose-exploration/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/indramahkota/android-compose-exploration)](https://github.com/indramahkota/android-compose-exploration/stargazers)  [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![GitHub](https://img.shields.io/github/license/indramahkota/mad-base-sample?color=blue)](https://github.com/indramahkota/mad-base-sample/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/indramahkota/mad-base-sample)](https://github.com/indramahkota/mad-base-sample/stargazers) [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-💻 Requirements
-------------
+## 💻 Requirements
+
 You need to use [Android Studio](https://developer.android.com/studio).
 You can clone this repository or import the
 project from Android Studio.
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/idmahkota/android-compose-exploration.git
+$ git clone https://github.com/idmahkota/mad-base-sample.git
 
-# Get from VCS Android Studio
+# From VCS Android Studio
 File -> New -> Project from Version Control -> GitHub -> Clone.
 ```
- -
+
+![Modern Android Development Preview](https://raw.githubusercontent.com/indramahkota/indramahkota.github.io/master/assets/githubs/mad-sample.png)
+
 ## License
 
 ```markdown
@@ -38,3 +40,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
