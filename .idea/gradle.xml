@@ -7,19 +7,20 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/app/app" />
-            <option value="$PROJECT_DIR$/app/common" />
-            <option value="$PROJECT_DIR$/app/data" />
-            <option value="$PROJECT_DIR$/app/domain" />
-            <option value="$PROJECT_DIR$/buildSrc" />
-            <option value="$PROJECT_DIR$/feature_dynamic" />
-            <option value="$PROJECT_DIR$/feature_dynamic/dynamic_feature" />
-            <option value="$PROJECT_DIR$/feature_regular" />
-            <option value="$PROJECT_DIR$/feature_regular/regular_feature" />
+            <option value="$PROJECT_DIR$/app/regular_feature" />
+            <option value="$PROJECT_DIR$/app/regular_feature/homepage" />
+            <option value="$PROJECT_DIR$/common" />
+            <option value="$PROJECT_DIR$/common/lib_android" />
+            <option value="$PROJECT_DIR$/common/lib_compose" />
+            <option value="$PROJECT_DIR$/common/lib_kotlin" />
+            <option value="$PROJECT_DIR$/data" />
+            <option value="$PROJECT_DIR$/data/common" />
           </set>
         </option>
       </GradleProjectSettings>

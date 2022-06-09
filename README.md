@@ -1,36 +1,21 @@
-# Base Android App with Hilt Multi Module
+# Jetpack Compose Exploration
 
-[![GitHub](https://img.shields.io/github/license/indramahkota/hilt-multi-module-sample?color=blue)](https://github.com/indramahkota/hilt-multi-module-sample/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/indramahkota/hilt-multi-module-sample)](https://github.com/indramahkota/hilt-multi-module-sample/stargazers)  [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+[![GitHub](https://img.shields.io/github/license/indramahkota/android-compose-exploration?color=blue)](https://github.com/indramahkota/android-compose-exploration/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/indramahkota/android-compose-exploration)](https://github.com/indramahkota/android-compose-exploration/stargazers)  [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-## Structure
-```
-- hilt-multi-module-sample
-    - app
-        - app (Android Application)
-        - common (Android Library)
-        - data (Android Library)
-        - domain (Android Library)
-    - buildSrc (Kotlin Library - All Dependencies)
-    - feature_dynamic
-        - dynamic_feature (Android Dynamic Feature)
-        - other_dynamic_feature (Android Dynamic Feature)
-    - feature_regular
-        - regular_feature (Android Library)
-        - other_regular_feature (Android Library)
-```
-
-## How To Use 🔧
+💻 Requirements
+------------
+You need to use [Android Studio](https://developer.android.com/studio).
+You can clone this repository or import the
+project from Android Studio.
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/indramahkota/hilt-multi-module-sample.git
+$ git clone https://github.com/idmahkota/android-compose-exploration.git
 
-# Go into the repository
-$ cd hilt-multi-module-sample
-
-# Open in Android Studio
+# Get from VCS Android Studio
+File -> New -> Project from Version Control -> GitHub -> Clone.
 ```
-
+ -
 ## License
 
 ```markdown
