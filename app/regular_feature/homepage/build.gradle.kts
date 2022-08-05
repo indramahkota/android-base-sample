@@ -19,15 +19,6 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false // Enables code shrinking for the release build type.
-            proguardFiles(
-                getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-            )
-        }
-    }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -118,19 +109,6 @@ dependencies {
     kaptAndroidTest(libs.dagger.hilt.compiler)
     testImplementation(libs.dagger.hilt.testing)
     kaptTest(libs.dagger.hilt.compiler)
-
-    // Room
-    implementation(libs.room.runtime)
-    implementation(libs.room)
-    kapt(libs.room.compiler)
-
-    // Okhttp
-    implementation(libs.okhttp)
-    implementation(libs.okhttp.loggingInterceptor)
-
-    // Retrofit
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.converter.gson)
 
     // Timber
     implementation(libs.timber)

@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
+import android.os.Build
+import androidx.annotation.RequiresApi
 
 /**
  * Must have ACCESS_NETWORK_STATE permission
@@ -11,6 +13,7 @@ import android.net.NetworkCapabilities
 @SuppressLint("MissingPermission")
 class ConnectionHelper(private val context: Context) {
     val isOnline: Boolean
+        @RequiresApi(Build.VERSION_CODES.M)
         get() {
             val connectivityManager =
                 context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager

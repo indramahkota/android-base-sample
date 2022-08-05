@@ -7,7 +7,6 @@ plugins {
     id("kotlin-android")
     id("kotlin-kapt")
     id("kotlin-parcelize")
-    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -17,15 +16,6 @@ android {
         minSdk = 21
         targetSdk = 33
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false // Enables code shrinking for the release build type.
-            proguardFiles(
-                getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-            )
-        }
     }
 
     compileOptions {
@@ -38,14 +28,6 @@ android {
     }
 }
 
-kapt {
-    arguments {
-        // Make Hilt share the same definition of Components in tests instead of
-        // creating a new set of Components per test class.
-        arg("dagger.hilt.shareTestComponents", "true")
-    }
-}
-
 dependencies {
     // Core KTX
     implementation(libs.core)
@@ -54,30 +36,6 @@ dependencies {
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
     testImplementation(libs.kotlinx.coroutines.test)
-
-    /**
-     * Hilt
-     * https://dagger.dev/hilt/gradle-setup#using-hilt-with-kotlin
-     */
-    implementation(libs.dagger.hilt.android)
-    kapt(libs.dagger.hilt.compiler)
-    androidTestImplementation(libs.dagger.hilt.testing)
-    kaptAndroidTest(libs.dagger.hilt.compiler)
-    testImplementation(libs.dagger.hilt.testing)
-    kaptTest(libs.dagger.hilt.compiler)
-
-    // Room
-    implementation(libs.room.runtime)
-    implementation(libs.room)
-    kapt(libs.room.compiler)
-
-    // Okhttp
-    implementation(libs.okhttp)
-    implementation(libs.okhttp.loggingInterceptor)
-
-    // Retrofit
-    implementation(libs.retrofit)
-    implementation(libs.retrofit.converter.gson)
 
     // Timber
     implementation(libs.timber)
